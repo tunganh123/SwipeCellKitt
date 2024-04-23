@@ -46,7 +46,7 @@ class SwipeActionsView: UIView {
     var visibleWidth: CGFloat = 0 {
         didSet {
             // If necessary, adjust for safe areas
-            visibleWidth = max(0, visibleWidth - safeAreaMargin)
+            visibleWidth = max(0, visibleWidth - safeAreaMargin )
 
             let preLayoutVisibleWidths = transitionLayout.visibleWidthsForViews(with: layoutContext)
 
@@ -108,7 +108,8 @@ class SwipeActionsView: UIView {
         feedbackGenerator.prepare()
         
         super.init(frame: .zero)
-        
+       //hihi
+        layer.cornerRadius = 10
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -133,7 +134,7 @@ class SwipeActionsView: UIView {
         
         buttons = addButtons(for: self.actions, withMaximum: maxSize, contentEdgeInsets: contentEdgeInsets)
     }
-    
+     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -273,7 +274,7 @@ class SwipeActionsView: UIView {
         super.layoutSubviews()
         
         for subview in subviews.enumerated() {
-            transitionLayout.layout(view: subview.element, atIndex: subview.offset, with: layoutContext)
+            transitionLayout.layout(view: subview.element, atIndex: subview.offset, with: layoutContext )
         }
         
         if expanded {
@@ -291,7 +292,7 @@ class SwipeActionButtonWrapperView: UIView {
         case .left:
             contentRect = CGRect(x: frame.width - contentWidth, y: 0, width: contentWidth, height: frame.height)
         case .right:
-            contentRect = CGRect(x: 0, y: 0, width: contentWidth, height: frame.height)
+            contentRect = CGRect(x: 0 , y: 0, width: contentWidth, height: frame.height)
         }
         
         super.init(frame: frame)

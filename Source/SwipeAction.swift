@@ -40,9 +40,9 @@ public class SwipeAction: NSObject {
     ///
     /// - note: If you do not specify a font, a 15pt system font is used.
     public var font: UIFont?
-    
+     
     /// The text color of the action button.
-    ///
+    ///f
     /// - note: If you do not specify a color, white is used.
     public var textColor: UIColor?
     
